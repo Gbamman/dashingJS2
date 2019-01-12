@@ -9,7 +9,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precommit": "npm run lint",
     "commitlint": "commitlint -E"
   },
   "private": true,
@@ -49,5 +48,10 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "npm run commitlint && npm run lint"
+    }
   }
 }
